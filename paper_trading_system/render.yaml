@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: paper-trading-system
-    env: python
+    name: FT2
+    env: python3
     buildCommand: pip install -r requirements.txt
-    startCommand: python forward_tester.py
+    startCommand: python3 forward_tester.py
     envVars:
       - key: EXCHANGE
         value: binance
