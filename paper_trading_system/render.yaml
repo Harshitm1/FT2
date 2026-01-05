@@ -2,6 +2,7 @@ services:
   - type: web
     name: FT2
     env: python3
+    ootDir: paper_trading_system
     buildCommand: pip install -r requirements.txt
     startCommand: python3 forward_tester.py
     envVars:
