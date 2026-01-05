@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: paper-trading-system
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python forward_tester.py
+    envVars:
+      - key: EXCHANGE
+        value: binance
+      - key: SYMBOL
+        value: ETH/USDT
+      - key: TELEGRAM_ENABLED
+        value: true
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: LOG_LEVEL
+        value: INFO
